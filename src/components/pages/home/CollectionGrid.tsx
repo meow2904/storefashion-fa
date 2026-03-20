@@ -16,7 +16,7 @@ export function CollectionGrid() {
             </div>
 
             {/* Grid Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-[600px] md:h-[700px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-[600px] md:h-[500px] lg:h-[700px]">
 
                 {/* BIG CARD: Tailored Essentials */}
                 <div className="md:col-span-2 relative group overflow-hidden bg-zinc-100">

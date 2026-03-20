@@ -24,20 +24,20 @@ export async function Header() {
     const menuData = await getMenu();
     return (
         <header className="sticky top-0 z-40 w-full border-b border-zinc-100 bg-white/80 backdrop-blur-md">
-            <div className="container mx-auto px-6 lg:px-10 h-16 lg:h-20 flex items-center justify-between">
-                <div className="flex items-center gap-4 lg:gap-12">
-                    <a href="/" className="text-xl lg:text-2xl font-bold tracking-[0.2em] lg:tracking-[0.3em] uppercase">Curator</a>
+            <div className="container mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
+                <div className="flex items-center gap-4 md:gap-8 lg:gap-12">
+                    <a href="/" className="text-xl md:text-2xl font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase">Curator</a>
                     <NavMenu items={menuData} />
                 </div>
 
-                <div className="flex items-center gap-4 lg:gap-6">
+                <div className="flex items-center gap-4 lg:gap-6 rounded-md">
                     <div className="hidden lg:block w-100">
                         <InputSearch placeholder="Search products...    "
                             className='rounded-4xl focus:border-gray-400'
                         />
                     </div>
-                    <button className="relative p-1 lg:p-0">
-                        <ShoppingBag className="size-5 lg:size-5" strokeWidth={1.5} />
+                    <button className="relative p-1">
+                        <ShoppingBag className="size-5" strokeWidth={1.5} />
                         <span className="absolute top-0 right-0 lg:-top-2 lg:-right-2 bg-black text-white text-[8px] lg:text-[9px] w-3.5 h-3.5 lg:w-4 lg:h-4 rounded-full flex items-center justify-center">0</span>
                     </button>
                     <MobileMenu items={menuData} />

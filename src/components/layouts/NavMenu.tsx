@@ -7,11 +7,11 @@ import { MenuItem } from '@/types/menu';
 
 export function NavMenu({ items }: { items: MenuItem[] }) {
     return (
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6 lg:gap-8">
             {items.map((item) => (
                 <div key={item.id} className="relative group">
                     <div className="flex items-center gap-1 cursor-pointer py-6">
-                        <Link href={item.href || "#"} className="text-[14px] font-medium uppercase tracking-[0.2em] text-zinc-500 hover:text-black transition-colors">
+                        <Link href={item.href || "#"} className="text-[12px] lg:text-[14px] font-medium uppercase tracking-[0.2em] text-zinc-500 hover:text-black transition-colors">
                             {item.title}
                         </Link>
                         {item.submenu && <ChevronDown className="size-3 text-zinc-300 group-hover:rotate-180 transition-transform" />}

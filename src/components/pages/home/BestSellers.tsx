@@ -19,7 +19,7 @@ export function BestSellers() {
             </div>
 
             {/* Grid sản phẩm */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
                 {BEST_SELLERS.map((product) => (
                     <ProductCard key={product.id} {...product} />
                 ))}

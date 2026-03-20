@@ -1,11 +1,13 @@
+"use client";
 import ProductDetailPage from "@/components/pages/product-detail/product-detail";
+import { use } from "react";
 
 interface Props {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }
 
-export default async function DetailPage({ params }: Props) {
-    const { slug } = params;
+export default function DetailPage({ params }: Props) {
+    const { slug } = use(params);
 
     return (
         <div className="container mx-auto py-20">
